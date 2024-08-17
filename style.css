@@ -359,28 +359,30 @@ article .icon {
   position: relative;
 }
 
-@keyframes scrollRight {
+@keyframes scrollLeftRight {
   0% {
     transform: translateX(0%);
   }
+  50% {
+    transform: translateX(-25%);
+  }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(0%);
   }
 }
 
 .project-details-container {
   display: flex;
   justify-content: center;
-  overflow: hidden;
+  overflow: hidden; /* Hide the overflowing content */
   width: 100%;
   position: relative;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
+  white-space: nowrap; /* Ensure all items stay in a single line */
 }
 
 .project-containers {
   display: flex;
-  /* animation: scrollRight 60s linear infinite; */
+  animation: scrollLeftRight 30s linear infinite; /* Scroll from left to right */
 }
 
 .details-container-sub {
@@ -391,7 +393,6 @@ article .icon {
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
-  display: inline-block;
   min-width: 300px;
   margin: 10px;
 }
