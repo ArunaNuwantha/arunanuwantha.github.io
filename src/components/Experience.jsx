@@ -100,11 +100,9 @@ const Experience = () => {
               sm:mt-[22px] mt-[16px] hover:bg-battleGray 
               hover:text-eerieBlack transition duration-[0.2s] 
               ease-in-out"
-              onClick={() =>
-                window.open(
-                  'resume link', //paste the link to your resume here
-                  '_blank'
-                )
+              onClick={() => {
+                window.open('/cv/Aruna_Nuwantha_CV.pdf', '_blank');
+              }
               }
               onMouseOver={() => {
                 document
